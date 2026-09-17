@@ -305,6 +305,9 @@
     flex-shrink:0;
   }
   .memo-btn:hover{opacity:.9;}
+  .memo-embed{min-height:120px;}
+  .memo-fallback{font-size:13px;color:var(--text-dim);margin-top:10px;}
+  .memo-fallback a{color:var(--accent);font-weight:600;}
 
   .combo{
     margin:0 0 44px;
@@ -396,6 +399,11 @@
       <span class="name">TV</span>
       <span class="count">링크를 채팅으로 보내주세요</span>
     </div>
+    <a class="cat-card" href="#memo">
+      <span class="icon">📝</span>
+      <span class="name">메모</span>
+      <span class="count">누구나 남기기 가능</span>
+    </a>
     <div class="cat-card empty">
       <span class="icon">➕</span>
       <span class="name">새 제품군 추가</span>
@@ -705,16 +713,28 @@
     </div>
   </section>
 
-  <section class="add">
-    <div class="memo-box">
-      <div class="left">
-        <span class="glyph">📝</span>
-        <div>
-          <h3>메모 남기기</h3>
-          <p>발견한 특가, 의견, 결정한 내용을 자유롭게 남겨주세요. 누가 남겼는지·언제 남겼는지 자동으로 기록됩니다.</p>
-        </div>
-      </div>
-      <a class="memo-btn" href="https://github.com/hyunhoyuno/appliance-price-compare/discussions/1" target="_blank" rel="noopener">메모 남기러 가기 ↗</a>
+  <section class="category" id="memo">
+    <div class="cat-head">
+      <h2>📝 메모</h2>
+      <span class="sub">GitHub 계정으로 로그인 후 작성 · 날짜·시간 자동 기록</span>
+    </div>
+    <div class="memo-embed">
+      <script src="https://giscus.app/client.js"
+        data-repo="hyunhoyuno/appliance-price-compare"
+        data-repo-id="R_kgDOUeerxA"
+        data-category="General"
+        data-category-id="DIC_kwDOUeerxM4DFyyb"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+      </script>
+      <p class="memo-fallback">위젯이 안 보이면 <a href="https://github.com/hyunhoyuno/appliance-price-compare/discussions/1" target="_blank" rel="noopener">여기서 직접 메모 남기기 ↗</a></p>
     </div>
   </section>
 
