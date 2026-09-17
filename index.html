@@ -276,6 +276,36 @@
   .add-box ol{margin:0;padding-left:18px;font-size:14px;color:var(--text-dim);display:flex;flex-direction:column;gap:4px;}
   .add-box ol b{color:var(--text);}
 
+  .memo-box{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  .memo-box .left{display:flex;gap:20px;align-items:flex-start;}
+  .memo-box h3{margin:0 0 6px;font-size:18px;}
+  .memo-box p{margin:0;color:var(--text-dim);font-size:14px;max-width:52ch;}
+  .memo-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:14.5px;
+    padding:12px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .memo-btn:hover{opacity:.9;}
+
   .combo{
     margin:0 0 44px;
     background:linear-gradient(135deg,var(--accent-dim),var(--surface));
@@ -672,6 +702,19 @@
     <div class="verdict">
       <span>🏆</span>
       <div><b>추천:</b> 색상을 <b>다크메탈(RM70F90R2DD)</b>로 바꾸면 쿠폰+카드할인 적용가 <b>1,599,530원</b>이 지금까지 찾은 최저가 — 원래 색상(R2D) 신한카드 할인가(1,612,710원)보다도 살짝 더 쌈. 보내주신 원래 쿠팡 링크(1,803,530원) 대비 약 20만 원 절약.</div>
+    </div>
+  </section>
+
+  <section class="add">
+    <div class="memo-box">
+      <div class="left">
+        <span class="glyph">📝</span>
+        <div>
+          <h3>메모 남기기</h3>
+          <p>발견한 특가, 의견, 결정한 내용을 자유롭게 남겨주세요. 누가 남겼는지·언제 남겼는지 자동으로 기록됩니다.</p>
+        </div>
+      </div>
+      <a class="memo-btn" href="https://github.com/hyunhoyuno/appliance-price-compare/discussions/1" target="_blank" rel="noopener">메모 남기러 가기 ↗</a>
     </div>
   </section>
 
