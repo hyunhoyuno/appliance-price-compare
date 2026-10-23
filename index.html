@@ -497,7 +497,29 @@
         </tbody>
       </table>
     </div>
-    <div class="verdict" style="margin-top:16px;"><span>🏆</span><div><b>정리 (10/23 밤 갱신):</b> 워시타워 WF2420HCWWC의 와우 특가 1,810,520원이 사라지고 지금은 일반 2,050,420원입니다. 이 가격 기준으로 <b>S10 MaxV Ultra 직배수 조합은 3,690,410원(350만원 190,410원 초과)</b>, <b>S9 MaxV Ultra 직배수 조합은 3,390,410원(109,590원 여유)</b>입니다. 와우 특가가 다시 나오면 S10 조합도 3,450,510원으로 350만원 안에 들어옵니다. 직배수는 상수도·배수 배관이 로봇 스테이션 자리에 있어야 쓸 수 있으니 설치 위치는 따로 확인하세요.</div></div>
+        <h3 style="margin:24px 0 8px;">📝 옵션 정하기 (직접 입력)</h3>
+    <p class="rec-note">쿠팡 상품 페이지에서 고를 수 있는 옵션입니다. 고르거나 적으면 이 브라우저에 자동 저장됩니다. 가격 외에 설치 날짜, 요청사항은 결제 화면에서 정합니다.</p>
+    <style>.opt-box{background:var(--surface);border:1px solid var(--border,#333);border-radius:14px;padding:16px;margin:0 0 14px;}.opt-box h4{margin:0 0 10px;font-size:15px;}.opt-row{display:grid;grid-template-columns:150px 1fr;gap:8px;align-items:center;margin:8px 0;font-size:13.5px;}.opt-in{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #444;background:#111;color:inherit;font:inherit;box-sizing:border-box;}.opt-btn{padding:8px 14px;border-radius:8px;border:1px solid #888;background:transparent;color:inherit;cursor:pointer;font:inherit;margin-right:6px;}@media(max-width:640px){.opt-row{grid-template-columns:1fr;}}</style>
+    <div class="opt-box"><h4>🌀 워시타워 · 삼성 WF2420HCWWC</h4>
+      <div class="opt-row"><label>색상</label><select id="o_wt_color" class="opt-in"><option>화이트 (로켓설치)</option><option>블랙캐비어 (+691,580원, 로켓설치)</option><option>그레이지 (일시품절)</option></select></div>
+      <div class="opt-row"><label>쿠팡안심케어 (연장보증)</label><select id="o_wt_care" class="opt-in"><option>선택안함</option><option>무상보증연장 3년 150만원 한도 (+14,000원)</option><option>무상보증연장 3년 200만원 한도 (+19,000원)</option><option>무상보증연장 5년 150만원 한도 (+20,000원)</option><option>무상보증연장 5년 200만원 한도 (+27,000원)</option></select></div>
+      <div class="opt-row"><label>설치 희망일</label><input id="o_wt_date" class="opt-in" placeholder="예: 11/7 (10/26~11/23 중 지정 가능)"></div>
+      <div class="opt-row"><label>메모</label><input id="o_wt_memo" class="opt-in" placeholder="예: 사다리차 필요, 폐가전 수거"></div></div>
+    <div class="opt-box"><h4>🤖 로보락 로봇청소기</h4>
+      <div class="opt-row"><label>모델</label><select id="o_rb_model" class="opt-in"><option>S10 MaxV Ultra 직배수 (RRE0VES+EWFD56HRR)</option><option>S9 MaxV Ultra 직배수 (S90VER+EWFD33HRR)</option></select></div>
+      <div class="opt-row"><label>색상</label><select id="o_rb_color" class="opt-in"><option>화이트</option><option>블랙</option></select></div>
+      <div class="opt-row"><label>쿠팡안심케어 (연장보증)</label><select id="o_rb_care" class="opt-in"><option>선택안함</option><option>무상보증연장 3년 100만원 한도 (+9,500원)</option><option>무상보증연장 3년 150만원 한도 (+14,000원)</option><option>무상보증연장 5년 100만원 한도 (+13,500원)</option><option>무상보증연장 5년 150만원 한도 (+20,000원)</option></select></div>
+      <div class="opt-row"><label>직배수 설치</label><select id="o_rb_plumb" class="opt-in"><option>직접 시공/기존 배관 있음</option><option>업체 의뢰 예정</option><option>아직 미정</option></select></div>
+      <div class="opt-row"><label>메모</label><input id="o_rb_memo" class="opt-in" placeholder="예: 스테이션 놓을 위치, 배관 위치"></div></div>
+    <div class="opt-box"><h4>🧾 공통</h4>
+      <div class="opt-row"><label>결제 / 쿠폰</label><input id="o_pay" class="opt-in" placeholder="예: 쿠팡 와우, 카드 즉시할인, 웰컴백 쿠폰 여부"></div>
+      <div class="opt-row"><label>기타 메모</label><input id="o_etc" class="opt-in" placeholder="자유롭게 적으세요"></div>
+      <button class="opt-btn" id="o_copy" type="button">선택 내용 복사</button><button class="opt-btn" id="o_clear" type="button">초기화</button><span id="o_msg" style="font-size:12px;color:var(--text-dim);"></span></div>
+    <script>(function(){var ids=['o_wt_color','o_wt_care','o_wt_date','o_wt_memo','o_rb_model','o_rb_color','o_rb_care','o_rb_plumb','o_rb_memo','o_pay','o_etc'];var K='tower_robot_opts_v1';var d={};try{d=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+ids.forEach(function(i){var el=document.getElementById(i);if(!el)return;if(d[i]!=null)el.value=d[i];var s=function(){d[i]=el.value;try{localStorage.setItem(K,JSON.stringify(d))}catch(e){}};el.addEventListener('input',s);el.addEventListener('change',s);});
+document.getElementById('o_copy').onclick=function(){var v=function(i){return document.getElementById(i).value||'-'};var t='[워시타워] 삼성 WF2420HCWWC\n색상: '+v('o_wt_color')+'\n안심케어: '+v('o_wt_care')+'\n설치 희망일: '+v('o_wt_date')+'\n메모: '+v('o_wt_memo')+'\n\n[로봇청소기] '+v('o_rb_model')+'\n색상: '+v('o_rb_color')+'\n안심케어: '+v('o_rb_care')+'\n직배수 설치: '+v('o_rb_plumb')+'\n메모: '+v('o_rb_memo')+'\n\n결제/쿠폰: '+v('o_pay')+'\n기타: '+v('o_etc');var m=document.getElementById('o_msg');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){m.textContent='복사했습니다'},function(){m.textContent='복사 실패: 직접 선택해서 복사하세요'});};
+document.getElementById('o_clear').onclick=function(){ids.forEach(function(i){var el=document.getElementById(i);if(el.tagName==='SELECT')el.selectedIndex=0;else el.value='';d[i]=el.value;});try{localStorage.setItem(K,JSON.stringify(d))}catch(e){}};})();</script>
+<div class="verdict" style="margin-top:16px;"><span>🏆</span><div><b>정리 (10/23 밤 갱신):</b> 워시타워 WF2420HCWWC의 와우 특가 1,810,520원이 사라지고 지금은 일반 2,050,420원입니다. 이 가격 기준으로 <b>S10 MaxV Ultra 직배수 조합은 3,690,410원(350만원 190,410원 초과)</b>, <b>S9 MaxV Ultra 직배수 조합은 3,390,410원(109,590원 여유)</b>입니다. 와우 특가가 다시 나오면 S10 조합도 3,450,510원으로 350만원 안에 들어옵니다. 직배수는 상수도·배수 배관이 로봇 스테이션 자리에 있어야 쓸 수 있으니 설치 위치는 따로 확인하세요.</div></div>
   </section>
 
   <section class="category" id="wow350">
